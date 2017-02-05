@@ -13,12 +13,89 @@
     tools:context="com.example.maxence.myapplication.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bonjour le monde !"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView" />
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Poids (kg)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblPoids"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtPoids"
+            android:numeric="decimal" />
+
+        <TextView
+            android:text="Taille"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblTaille"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtTaille"
+            android:numeric="decimal" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:text="Mètre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnMetre"
+                android:layout_weight="1"
+                android:checked="true" />
+
+            <RadioButton
+                android:text="Centimètre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCentimetre"
+                android:layout_weight="1"
+                android:checked="false" />
+        </RadioGroup>
+
+        <CheckBox
+            android:text="Fonction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbFonction" />
+
+        <Button
+            android:text="Calculer IMC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalculer" />
+
+        <Button
+            android:text="RàZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRaz" />
+
+        <TextView
+            android:text="Résultat : "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblResultat" />
+
+    </LinearLayout>
 </RelativeLayout>
